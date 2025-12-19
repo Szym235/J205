@@ -1,0 +1,14 @@
+<%- include('../partials/header') %>
+
+<main>
+    <h2>Utwórz konto</h2>
+    <form action="/register" method="POST">
+        <input type="text" name="username" placeholder="Nazwa użytkownika" required><br>
+        <input type="password" name="password" placeholder="Hasło" required><br>
+        <label for="isAdmin">Konto admina</label>
+        <input name="isAdmin" type="checkbox"><br>
+        <button type="submit">Utwórz konto</button>
+    </form>
+    <a href="register">Dodaj konto</a>
+</main>
+<%- include('../partials/footer') %>

@@ -1,0 +1,4 @@
+Aby poprawnie uruchomić bazę, należy w konsoli dockra użyć komend:
+docker run --name [nazwa serwera] 
+-p 27017:27017
+-d mongo:6.0

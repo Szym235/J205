@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+}
+
+header{
+    width: 100%;
+    text-align: center;
+    background-color:crimson;
+}
+
+h1{ 
+    padding: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    color:beige;
+}
+
+footer{
+    width: 100%;
+    background-color:crimson;
+    position: fixed;
+    bottom: 0;
+}
+
+footer a{
+    margin: 20px;
+}
+
+main{
+    padding: 10px;
+}
+
+.pizzaItem{
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.blackLink{
+    color: black;
+    text-decoration: underline;
+}
+
+.blackLink:hover{
+    color: gray;
+    text-decoration: underline;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li{
+    list-style: none; 
+}
+
+form input{
+    margin-bottom: 5px;
+}
+
+form button{
+    margin-bottom: 5px;
+}

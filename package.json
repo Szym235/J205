@@ -1,0 +1,21 @@
+{
+  "name": "goscipizza",
+  "version": "1.0.0",
+  "description": "Aplikacja Node.js z Express i EJS będąca wirtualnym menu pizzeri Gościpizza",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "keywords": [],
+  "author": "Szymon Gościniewicz",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
+    "ejs": "^3.1.10",
+    "express": "^5.2.1",
+    "express-session": "^1.18.2",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {}
+}

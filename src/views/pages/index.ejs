@@ -1,0 +1,39 @@
+<%- include('../partials/header') %>
+
+
+    <main>
+            <form method="GET" action="/">
+        <input type="text" id="searchInput" name="searchInput" placeholder="Szukaj pizzy...">
+        <input type="submit" value="Szukaj">
+        <select id="sorter" name="sorter" onchange="this.form.submit()">
+            <option value="name">Nazwa</option>
+            <option value="price">Cena</option>
+        </select>
+            <script>
+            var urlParams = new URLSearchParams(window.location.search);
+            var search = urlParams.get('searchInput');
+            document.getElementById("searchInput").value = search;
+            var sorter = urlParams.get('sorter');
+            document.getElementById("sorter").value = sorter;
+        </script>
+</form>
+    </form>
+        <ul>
+            <% pizzas.forEach(pizza => { %>
+                <li class="pizzaItem">
+                    <h3><%= pizza.name %></h3>
+                    <p><%= pizza.description %></p>
+                    <p>Cena: <%= pizza.price %> PLN</p>
+                    <% if(isLoggedOneAdmin){ %>
+                    <a class="blackLink" href="/edit/<%= pizza._id %>"> Edytuj</a>
+                    <form action="/delete/<%= pizza._id %>" method="POST" style="display:inline;">
+                    <button type="submit"> Usuń</button>
+                    <% } %>
+                    </form>
+                </li>
+            <% }) %>
+        </ul>
+    </main>
+</body>
+
+<%- include('../partials/footer') %>

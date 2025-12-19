@@ -1,0 +1,16 @@
+
+<footer>
+    <p><a href="/about">O nas</a>
+    <% if(isLoggedOneAdmin) { %>
+        <a href="/add">Dodaj pizzę</a>
+    <% } %>
+    <%    if(usernameOfLoggedOne == "") { %>
+    <a href="/login">Zaloguj się</a>
+    <% } else { %>
+    <a href="/logout">Wyloguj się</a>
+    <% } %>
+    <a class="username" id="username"> 
+    <% if(usernameOfLoggedOne != ""){ %> Zalogowano jako: <% } %> <%- usernameOfLoggedOne %></a></p> 
+</footer>
+</body>
+</html>
