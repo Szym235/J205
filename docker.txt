@@ -1,4 +1,4 @@
-Aby poprawnie uruchomić bazę, należy w konsoli dockra użyć komend:
-docker run --name [nazwa serwera] 
--p 27017:27017
--d mongo:6.0
+Aby poprawnie uruchomić bazę, należy:
+    1 Uruchomić aplikację Docker Desktop
+    2 Uruchomić konsolę dockera
+    3 Użyć komendy "docker run -d --name forumDB -p 27017:27017 mongo:6.0"
