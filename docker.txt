@@ -1,4 +1,10 @@
-Aby poprawnie uruchomić bazę, należy:
+Aby poprawnie stworzyć bazę, należy:
     1 Uruchomić aplikację Docker Desktop
     2 Uruchomić konsolę dockera
     3 Użyć komendy "docker run -d --name forumDB -p 27017:27017 mongo:6.0"
+    4 Poczekać aż Docker skończy tworzyć kontener (powiadomi o tym w konsoli)
+    5 Otworzyć zakładkę Containers w Docker Dekstop i sprawdzić czy baza o wartości "27017:27017" w polu
+     Port(s) jest uruchomiona (wyświetla przycisk o kształcie kwadrata w polu Actions), jeśli nie jest
+     uruchomiona, należy ją uruchomić poprzez wciśnięcie przycisku w kształcie trójkąta
+ 
+Kiedy chce się później uruchomić bazę należy powtórzyć krok 1 i 5

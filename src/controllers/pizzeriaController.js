@@ -80,10 +80,10 @@ async function getRegisterPage(req, res) {
 async function registerUser(req, res) {
     const { username, password, isAdmin } = req.body;
 
-    if(username != "" && password != "")
+    if(username != "" && password != "" && await pizzeriaModel.checkIfUserExists(username) == false)
     { 
         await pizzeriaModel.registerUser(username, password, isAdmin)
-        res.redirect("/login", {usernameOfLoggedOne});
+        res.redirect("/login");
         return;
     }
     res.redirect("/register");
@@ -92,10 +92,11 @@ async function registerUser(req, res) {
 async function loginUser(req,res)
 {
     const {username, password} = req.body;
-    if(username != "" && password != "" && await pizzeriaModel.loginUser(username, password))
+    const user = await pizzeriaModel.loginUser(username, password);
+    if(username != "" && password != "" && user != null)
     {
-        req.session.username = username;
-        if(pizzeriaModel.checkIfUserIsAdmin(username)) req.session.isAdmin = true;
+        req.session.username = user.username;
+        if(user.isAdmin != null) req.session.isAdmin = true;
         else req.session.isAdmin = false;
         res.redirect("/");
         return;

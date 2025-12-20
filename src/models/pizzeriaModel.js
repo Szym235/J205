@@ -48,15 +48,21 @@ async function loginUser(username, password) {
         const passwordMatch = await bcrypt.compare(password, user.password);
         if(passwordMatch)
         {
-            return true;
+            return user;
         }
     }
-    return false;
+    return null;
 }
 
-async function checkIfUserIsAdmin(username) {
-        const db = getDB();
-    return(await db.collection('users').findOne({ username: username }).isAdmin);
+async function checkIfUserExists(username) {
+    const db = getDB();
+    const user = await db.collection('users').findOne({ username: username });
+    
+    if(user != null)
+    {
+        return true;
+    }
+    return false;
 }
 
 module.exports = { 
@@ -67,5 +73,5 @@ module.exports = {
     updatePizza, 
     registerUser, 
     loginUser, 
-    checkIfUserIsAdmin
+    checkIfUserExists
 };
