@@ -15,7 +15,7 @@
     3. Otworzyć folder za pomocą komendy: "cd <nazwa folderu>"
     4. Sklonować repozytorium komendą: "git clone https://github.com/Szym235/J205"
     5. Otworzyć folder za pomocą komendy: "cd J205"
-    6. Zainstalować zależności poprzez komendę: "np install ejs express bcrypt express-session mongodb" 
+    6. Zainstalować zależności poprzez komendę: "npm install ejs express bcrypt express-session mongodb" 
     7. Stworzyć bazę danych według instrukcji z pliku "docker.txt"
     8. Uruchomić aplikację za pomocą komendy "npm start"
     9. Uruchomić stronę poprzez wpisanie adresu "http://localhost:3000" w przeglądarce 
